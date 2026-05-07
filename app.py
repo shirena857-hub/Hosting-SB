@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify, send_from_directory
 import os
 import zipfile
 import subprocess
@@ -542,7 +542,16 @@ def dashboard():
     # Sort servers by creation date (newest first)
     servers.sort(key=lambda x: x.get("created_at", ""), reverse=True)
 
-    return render_template("dashboard.html", servers=servers)
+    # Try to render template, fallback to inline HTML if template missing
+    try:
+        return render_template("dashboard.html", servers=servers)
+    except:
+        # Simple fallback dashboard
+        html = "<h1>JUBAYER Hosting Dashboard</h1><p>Welcome, {}</p><h2>Your Servers</h2><ul>".format(session['username'])
+        for s in servers:
+            html += "<li>{} - {}</li>".format(s['display_name'], "Running" if s['running'] else "Stopped")
+        html += "</ul><a href='/logout'>Logout</a>"
+        return html
 
 @app.route("/api/server/<action>/<name>", methods=["POST"])
 def server_action(action, name):
