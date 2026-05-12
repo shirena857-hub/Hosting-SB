@@ -1,6 +1,12 @@
+Flask
+Werkzeug
+Jinja2
+itsdangerous
+click
+blinker
 requests
 httpx
-google
+google-api-python-client
 protobuf
 pycryptodome
 psutil
@@ -10,5 +16,5 @@ protobuf-decoder
 pytz
 aiohttp
 cfonts
-flask
 gunicorn
+Flask-Cors
