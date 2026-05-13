@@ -390,7 +390,7 @@ def login():
     <body>
         <div class="particles" id="particles"></div>
         <div class="login-container">
-            <div class="logo">JUBAYER Hosting</div>
+            <div class="logo">SB Hosting</div>
             <div class="tagline">Unlimited Server Hosting - Free Forever</div>
             <form method="POST">
                 <input type="text" name="username" placeholder="Enter Username" required>
