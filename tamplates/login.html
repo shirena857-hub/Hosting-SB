@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Manager | Login</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(157, 0, 255, 0.3);
+            border: 1px solid #9d00ff;
+        }
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #9d00ff, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #9d00ff;
+            border-radius: 40px;
+            color: white;
+            font-size: 1rem;
+        }
+        input:focus {
+            border-color: #00d4ff;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #9d00ff, #00d4ff);
+            border: none;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(157,0,255,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1> Bot Manager</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Enter Username" autocomplete="off" required>
+            <button type="submit">Enter Dashboard</button>
+        </form>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #aaa;">No password required</p>
+    </div>
+</body>
+</html>
